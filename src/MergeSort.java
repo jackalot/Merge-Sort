@@ -38,6 +38,24 @@ public class MergeSort {
 		//Helps access our Subdivisions
 		//System.out.println(Subdivisions.get(0));
 		//System.out.println(Subdivisions);
-		
 	}
+	/*ConvertTo2dArray(OriginalArray, Subdivisions)
+	 * {
+	 * 	Create a new array named newArray
+	 at the length of the original.
+	 * 	for each element in subdivisions
+	 * 	{
+	 * 		(Remember, each element in 
+	 * 		subdivision is another array)
+	 * 		at the current index, in the second dimension
+	 		add the index 0 and 1 to new Array as a newArray at
+	 		the current index.
+	 		IE: Index 0 of Subdivisions:
+	 		{[1, 5],.....}
+	 		Add the 1, and 5 to newArray so it looks like this
+	 		IE: Index 0
+	 		[[1,5],....]
+	 * 	}
+	 * }
+	 * */
 }
