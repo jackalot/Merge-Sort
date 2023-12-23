@@ -22,7 +22,7 @@ public class MergeSort {
  * 			if index
  * }
  * */
-	public void Subdivide(int[] originalArray)
+	public ArrayList<Integer[]> Subdivide(int[] originalArray)
 	{
 		int length = originalArray.length;
 		int IndexOne;
@@ -46,8 +46,10 @@ public class MergeSort {
 		{
 			
 		}
+		return Subdivisions;
 		//Helps access our Subdivisions
 		//System.out.println(Subdivisions.get(0));
 		//System.out.println(Subdivisions);
+		
 	}
 }
