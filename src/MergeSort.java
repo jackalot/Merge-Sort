@@ -24,6 +24,30 @@ public class MergeSort {
  * */
 	public void Subdivide(int[] originalArray)
 	{
-		
+		int length = originalArray.length;
+		int IndexOne;
+		int IndexTwo;
+		ArrayList<Integer[]> Subdivisions = new ArrayList<Integer[]>();
+		if(length % 2 == 0) // even
+		{
+			IndexOne = 0;
+			IndexTwo = 1;
+			for(;IndexTwo < length ;)
+			{
+				Integer[] Nums = {-1, -1};
+				Nums[0] = originalArray[IndexOne];
+				Nums[1] = originalArray[IndexTwo];
+				IndexOne += 2;
+				IndexTwo += 2;
+				Subdivisions.add(Nums);
+			}
+		}
+		else //odd
+		{
+			
+		}
+		//Helps access our Subdivisions
+		//System.out.println(Subdivisions.get(0));
+		//System.out.println(Subdivisions);
 	}
 }
