@@ -2,10 +2,13 @@
 public class Start {
 	public static void main(String[] args) {
 		
+		/*Different arrays and tests*/
 		final int[] EVEN_LENGTH_ARRAY = {5,3,1,2,4,6,8,7};
 		final int[] ODD_LENGTH_ARRAY = {5,3,1,2,4,6,8,7,0};
+		final int[] EVEN_NUMBER_ARRAY = {4,2,6,8,10,4,10,6,2,8};
+		final int[] ODD_NUMBER_ARRAY = {5,3,7,9,1,5,1,7,3,9};
 		MergeSort sort = new MergeSort();
-		sort.Subdivide(NUM_ARRAY);;
+		sort.Subdivide(EVEN_LENGTH_ARRAY);
 		/*65318724
 		 * SUBDIVIDE
 		 *6531-8724
