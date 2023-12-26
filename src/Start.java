@@ -10,6 +10,7 @@ public class Start {
 		MergeSort sort = new MergeSort();
 		int[][] Subdivisions = sort.Subdivide(EVEN_LENGTH_ARRAY);
 		Subdivisions = sort.SwapSubdivisions(Subdivisions);
+		sort.JoinArrays(Subdivisions);
 		System.out.println(Subdivisions[0]);
 		System.out.println(Subdivisions[0][0]);
 		System.out.println(Subdivisions[0][1]);
