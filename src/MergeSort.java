@@ -11,7 +11,7 @@ public class MergeSort {
  * }
  * */
 	/*JoinArrays()
-	 * in our nested array example, the array current, looks like this:
+	 * in our nested array example, the array currently, looks like this:
 	 *	[[3, 5], [1, 2], [4, 6], [7, 8]]
 	 *and we need to get it to this:
 	 *	[[1,2,3,5], [4, 6, 7, 8]]
