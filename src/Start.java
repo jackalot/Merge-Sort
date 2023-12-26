@@ -9,9 +9,8 @@ public class Start {
 		final int[] ODD_NUMBER_ARRAY = {5,3,7,9,1,5,1,7,3,9};
 		MergeSort sort = new MergeSort();
 		ArrayList<Integer[]> Subdivisions = sort.Subdivide(EVEN_LENGTH_ARRAY);
-		sort.ConvertTo2dArray(Subdivisions);
-		Object[] t = Subdivisions.toArray();
-		System.out.print(Subdivisions.get(0)[1]);
+		Object[] OurSubDivisions = sort.ConvertTo2dArray(Subdivisions);
+		System.out.print(OurSubDivisions[0][0]);
 		/*65318724
 		 * SUBDIVIDE
 		 *6531-8724
