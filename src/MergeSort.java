@@ -30,6 +30,9 @@ public class MergeSort {
 	{
 		int[] FirstHalf;
 		int[] SecondHalf;
+		int[] FullArray;
+		int LowestNumber = 0;
+		int HighestNumber = 0;
 		//Increment over the outside array
 		int i = 1;
 		for( int j = 0; i < Subdivisions.length; i++ )
