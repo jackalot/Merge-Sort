@@ -31,8 +31,11 @@ public class MergeSort {
 		int[] FirstHalf;
 		int[] SecondHalf;
 		//Increment over the outside array
-		for(int i = 0; i < Subdivisions.length; i++)
+		int i = 1;
+		for( int j = 0; i < Subdivisions.length; i++ )
 		{
+			
+			j++;
 		}
 		return Subdivisions;
 	}
