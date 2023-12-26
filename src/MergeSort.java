@@ -11,15 +11,26 @@ public class MergeSort {
  * }
  * */
 	/*JoinArrays()
+	 * {
 	 * in our nested array example, the array currently, looks like this:
 	 *	[[3, 5], [1, 2], [4, 6], [7, 8]]
 	 *and we need to get it to this:
 	 *	[[1,2,3,5], [4, 6, 7, 8]]
-	 *Set first half to one Subdivision of our 2dArray
-	 *set second half to another Subdivision of our 2dArray
-	 *Create variables named:
-	 *Full array, LowestNumber, HighestNumber
+	 *Set first half to Half of our 2dArray
+	 *	set second half to Half of our 2dArray
 	 *
+	 *	this is index [0][Y] of Subdivisions
+	 *	and [1][Y] 
+	 *	With [3, 5] and [1, 2]
+	 *	Check 3 and 1
+	 *		1 is less than 3 so thats the new less
+	 *		add it to index 0 of FirstHalf
+	 *	Check 3 and 2
+	 *		2 is less than 3 so thats the new less
+	 *		add it to index 1 of FirstHalf
+	 *
+	 * 
+	 *}
 	 * */
 	public int[][] JoinArrays(int[][] Subdivisions)
 	{
