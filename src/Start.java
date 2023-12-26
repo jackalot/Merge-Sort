@@ -9,6 +9,7 @@ public class Start {
 		final int[] ODD_NUMBER_ARRAY = {5,3,7,9,1,5,1,7,3,9};
 		MergeSort sort = new MergeSort();
 		int[][] Subdivisions = sort.Subdivide(EVEN_LENGTH_ARRAY);
+		Subdivisions = sort.SwapSubdivisions(Subdivisions);
 		System.out.println(Subdivisions[0]);
 		System.out.println(Subdivisions[0][0]);
 		System.out.println(Subdivisions[0][1]);
@@ -23,7 +24,7 @@ public class Start {
 		 *ORGANIZE
 		 *1356-2478
 		 *ORGANIZE AGAIN
-		 *56137824
+		 *12345678
 		 * */
 	}
 }
