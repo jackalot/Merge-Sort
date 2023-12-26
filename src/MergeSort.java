@@ -20,6 +20,11 @@ public class MergeSort {
 	 * */
 	public int[][] JoinArrays(int[][] Subdivisions)
 	{
+		int[] newArray;
+		//Increment over the outside array
+		for(int i = 0; i < Subdivisions.length; i++)
+		{
+		}
 		return Subdivisions;
 	}
 	public int[][] Subdivide(int[] originalArray)
