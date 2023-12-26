@@ -44,8 +44,6 @@ public class MergeSort {
 		Object[] newArray = new Object[Subdivisions.size()];
 		for(int x = 0; x < Subdivisions.size(); x++)
 		{
-			int[] arr = {0, 0};
-			newArray[x] = arr;
 			newArray[x] = Subdivisions.get(x);
 		}
 	}
