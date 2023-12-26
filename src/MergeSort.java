@@ -39,12 +39,13 @@ public class MergeSort {
 		//System.out.println(Subdivisions.get(0));
 		//System.out.println(Subdivisions);
 	}
-	public void ConvertTo2dArray(ArrayList<Integer[]> Subdivisions)
+	public Object[] ConvertTo2dArray(ArrayList<Integer[]> Subdivisions)
 	{
 		Object[] newArray = new Object[Subdivisions.size()];
 		for(int x = 0; x < Subdivisions.size(); x++)
 		{
 			newArray[x] = Subdivisions.get(x);
 		}
+		return newArray;
 	}
 }
