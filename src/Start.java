@@ -1,4 +1,4 @@
-import java.util.ArrayList; // import the ArrayList class
+
 public class Start {
 	public static void main(String[] args) {
 		
@@ -8,8 +8,10 @@ public class Start {
 		final int[] EVEN_NUMBER_ARRAY = {4,2,6,8,10,4,10,6,2,8};
 		final int[] ODD_NUMBER_ARRAY = {5,3,7,9,1,5,1,7,3,9};
 		MergeSort sort = new MergeSort();
-		ArrayList<Integer[]> Subdivisions = sort.Subdivide(EVEN_LENGTH_ARRAY);
-		
+		int[][] Subdivisions = sort.Subdivide(EVEN_LENGTH_ARRAY);
+		System.out.println(Subdivisions[0]);
+		System.out.println(Subdivisions[0][0]);
+		System.out.println(Subdivisions[0][1]);
 		/*65318724
 		 * SUBDIVIDE
 		 *6531-8724
