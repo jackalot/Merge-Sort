@@ -14,13 +14,15 @@ public class MergeSort {
 	 * in our nested array example, the array current, looks like this:
 	 *	[[3, 5], [1, 2], [4, 6], [7, 8]]
 	 *and we need to get it to this:
-	 *	[[1, 2, 3, 4], [5, 6, 7, 8]]
-	 *
+	 *	[[1,2,3,5], [4, 6, 7, 8]]
+	 * Check the length of subdivisions, divide it by 2
+	 * Set variable named  
 	 *
 	 * */
 	public int[][] JoinArrays(int[][] Subdivisions)
 	{
-		int[] newArray;
+		int[] FirstHalf;
+		int[] SecondHalf;
 		//Increment over the outside array
 		for(int i = 0; i < Subdivisions.length; i++)
 		{
