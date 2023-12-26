@@ -1,4 +1,4 @@
-import java.util.ArrayList; // import the ArrayList class
+
 public class MergeSort {
 /*create a method named subdivide(int[] originalArray)
  * {
@@ -10,33 +10,37 @@ public class MergeSort {
  * 			
  * }
  * */
-	public ArrayList<Integer[]> Subdivide(int[] originalArray)
+	public int[][] Subdivide(int[] originalArray)
 	{
 		int length = originalArray.length;
 		int IndexOne;
 		int IndexTwo;
-		ArrayList<Integer[]> Subdivisions = new ArrayList<Integer[]>();
+		int[][] newArray = new int[0][0];
 		if(length % 2 == 0) // even
 		{
+			// Its even, make the length half so that
+			// we don't have nulls
+			newArray = new int[length / 2][];
+			//These two find the numbers for our original array
 			IndexOne = 0;
 			IndexTwo = 1;
-			for(;IndexTwo < length ;)
+			for(int i = 0;IndexTwo < length; i++)
 			{
-				Integer[] Nums = {-1, -1};
+				int[] Nums = {-1, -1};
+				//Add the current numbers in the
+				// original array
 				Nums[0] = originalArray[IndexOne];
 				Nums[1] = originalArray[IndexTwo];
-				IndexOne += 2;
-				IndexTwo += 2;
-				Subdivisions.add(Nums);
+				newArray[i] = Nums;
+				// increment
+				IndexOne += 2;// odd positions
+				IndexTwo += 2;// even positions
 			}
 		}
 		else //odd
 		{
 			
 		}
-		return Subdivisions;
-		//Helps access our Subdivisions
-		//System.out.println(Subdivisions.get(0));
-		//System.out.println(Subdivisions);
+		return newArray;
 	}
 }
