@@ -47,7 +47,12 @@ public int[][] SwapSubdivisions(int[][] Subdivisions)
 {
 	for(int x = 0; x < Subdivisions.length; x++)
 	{
-		
+		if(Subdivisions[x][0] > Subdivisions[x][1])
+		{
+			int Swap = Subdivisions[x][0];
+			Subdivisions[x][0] = Subdivisions[x][1];
+			Subdivisions[x][1] = Swap;
+		}
 	}
 	return Subdivisions;
 }
