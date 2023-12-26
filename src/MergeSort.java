@@ -31,14 +31,30 @@ public class MergeSort {
 		int[] FirstHalf;
 		int[] SecondHalf;
 		int[] FullArray;
-		int LowestNumber = 0;
-		int HighestNumber = 0;
+		int LowestNumber = 99999;
+		int HighestNumber = -99999;
 		//Increment over the outside array
-		int i = 1;
-		for( int j = 0; i < Subdivisions.length; i++ )
+		
+		for( int i = 0; i < Subdivisions[0].length; i++ )
 		{
-			
-			j++;
+			int ThisArray = Subdivisions[i][0];
+			int NextArray = Subdivisions[i + 1][0];
+			//is the current number bigger or smaller
+			// than the next number in the next array
+			if(ThisArray <= NextArray)
+			{
+				if(LowestNumber > ThisArray)
+				{
+				LowestNumber = ThisArray;
+				}
+			}
+			else
+			{
+				if(LowestNumber > NextArray)
+				{
+				LowestNumber = NextArray;
+				}
+			}	
 		}
 		return Subdivisions;
 	}
