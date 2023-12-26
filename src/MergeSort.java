@@ -10,6 +10,10 @@ public class MergeSort {
  * 			
  * }
  * */
+	public int[][] JoinArrays(int[][] Subdivisions)
+	{
+		return Subdivisions;
+	}
 	public int[][] Subdivide(int[] originalArray)
 	{
 		int length = originalArray.length;
