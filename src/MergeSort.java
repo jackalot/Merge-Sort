@@ -15,9 +15,16 @@ public class MergeSort {
 	 *	[[3, 5], [1, 2], [4, 6], [7, 8]]
 	 *and we need to get it to this:
 	 *	[[1,2,3,5], [4, 6, 7, 8]]
-	 * Check the length of subdivisions, divide it by 2
-	 * Set variable named  
-	 *
+	 *Set first half to one Subdivision of our 2dArray
+	 *set second half to another Subdivision of our 2dArray
+	 *Create variables named:
+	 *Full array, LowestNumber, HighestNumber
+	 *Check which array has a lower value in index 0,
+	 * lets say in [3,5] and [1,2].
+	 * If(Subdivision[0][0] < Subdivisions[1][0])
+	 * {
+	 *  lowest number get set to whichever is lower
+	 * }
 	 * */
 	public int[][] JoinArrays(int[][] Subdivisions)
 	{
