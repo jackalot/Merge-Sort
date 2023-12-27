@@ -13,7 +13,7 @@ public class MergeSort {
 	
 	public int[][] JoinArrays(int[][] Subdivisions)
 	{
-		ArrayList<Integer> FirstHalf = new ArrayList<String>();
+		ArrayList<Integer> FirstHalf = new ArrayList<Integer>();
 		int[] SecondHalf;
 		int[] FullArray;
 		int LowestNumber = 99999;
@@ -28,6 +28,7 @@ public class MergeSort {
 			 * */
 			int[] CurrentElement = Subdivisions[FirstSubdivisionIndex];
 			int[] NextElement = Subdivisions[SecondSubdivisionIndex];
+			if()
 			int CurrentInt = CurrentElement[0];
 			int NextInt = NextElement[0];
 			FirstSubdivisionIndex++;
