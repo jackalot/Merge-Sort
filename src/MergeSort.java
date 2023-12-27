@@ -32,10 +32,6 @@ public class MergeSort {
 			int NextInt = NextElement[0];
 			
 		}
-		System.out.println("CurrentInt " + CurrentInt );	
-		System.out.println("NextInt " + NextInt );	
-		NextInt = NextElement[1];
-		System.out.println("NextInt " + NextInt );	
 		return Subdivisions;
 	}
 	public int[][] Subdivide(int[] originalArray)
