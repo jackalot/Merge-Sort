@@ -21,7 +21,7 @@ public class MergeSort {
 		int FirstSubdivisionIndex = 0;
 		int SecondSubdivisionIndex = 1;
 		/*Access the subdivisions*/
-		for(int AllArrays = 0; FirstSubdivisionIndex < Subdivisions.length; AllArrays++)
+		while(FirstSubdivisionIndex < Subdivisions.length)
 		{
 			/*For these comments we will be using this array as an example:
 			 * [[3,5],[1,2],[4,6],[7,8]]
