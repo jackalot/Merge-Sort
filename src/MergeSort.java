@@ -21,10 +21,17 @@ public class MergeSort {
 		int FirstSubdivisionIndex = 0;
 		int SecondSubdivisionIndex = 1;
 		/*Access the subdivisions*/
-		int[] CurrentElement = Subdivisions[FirstSubdivisionIndex];
-		int[] NextElement = Subdivisions[SecondSubdivisionIndex];
-		int CurrentInt = CurrentElement[0];
-		int NextInt = NextElement[0];
+		for(int AllArrays = 0; FirstSubdivisionIndex < Subdivisions.length; AllArrays++)
+		{
+			/*For these comments we will be using this array as an example:
+			 * [[3,5],[1,2],[4,6],[7,8]]
+			 * */
+			int[] CurrentElement = Subdivisions[FirstSubdivisionIndex];
+			int[] NextElement = Subdivisions[SecondSubdivisionIndex];
+			int CurrentInt = CurrentElement[0];
+			int NextInt = NextElement[0];
+			
+		}
 		System.out.println("CurrentInt " + CurrentInt );	
 		System.out.println("NextInt " + NextInt );	
 		NextInt = NextElement[1];
