@@ -18,7 +18,7 @@ public class MergeSort {
 		int[] FullArray;
 		int LowestNumber = 99999;
 		int HighestNumber = -99999;
-		int k = 0;
+		
 		
 		return Subdivisions;
 	}
