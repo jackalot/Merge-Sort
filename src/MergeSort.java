@@ -21,7 +21,7 @@ public class MergeSort {
 		int FirstSubdivisionIndex = 0;
 		int SecondSubdivisionIndex = 1;
 		/*Access the subdivisions*/
-		while(FirstSubdivisionIndex < Subdivisions.length)
+		while(FirstSubdivisionIndex < Subdivisions.length - 1)
 		{
 			/*For these comments we will be using this array as an example:
 			 * [[3,5],[1,2],[4,6],[7,8]]
@@ -30,7 +30,8 @@ public class MergeSort {
 			int[] NextElement = Subdivisions[SecondSubdivisionIndex];
 			int CurrentInt = CurrentElement[0];
 			int NextInt = NextElement[0];
-			
+			FirstSubdivisionIndex++;
+			SecondSubdivisionIndex++;
 		}
 		return Subdivisions;
 	}
