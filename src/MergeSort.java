@@ -10,28 +10,7 @@ public class MergeSort {
  * 			
  * }
  * */
-	/*JoinArrays()
-	 * {
-	 * in our nested array example, the array currently, looks like this:
-	 *	[[3, 5], [1, 2], [4, 6], [7, 8]]
-	 *and we need to get it to this:
-	 *	[[1,2,3,5], [4, 6, 7, 8]]
-	 *Set first half to Half of our 2dArray
-	 *	set second half to Half of our 2dArray
-	 *
-	 *	this is index [0][Y] of Subdivisions
-	 *	and [1][Y] 
-	 *	With [3, 5] and [1, 2]
-	 *	Check 3 and 1
-	 *		1 is less than 3 so thats the new less
-	 *		add it to index 0 of FirstHalf
-	 *	Check 3 and 2
-	 *		2 is less than 3 so thats the new less
-	 *		add it to index 1 of FirstHalf
-	 *
-	 * 
-	 *}
-	 * */
+	
 	public int[][] JoinArrays(int[][] Subdivisions)
 	{
 		int[] FirstHalf;
@@ -40,28 +19,7 @@ public class MergeSort {
 		int LowestNumber = 99999;
 		int HighestNumber = -99999;
 		int k = 0;
-		//Do distributive property without multiplication
-		for( int i = 0; i < Subdivisions.length; i++ )
-		{
-			
-			for(int j = 0; j < Subdivisions[i].length; j++)	
-			{
-				int CurrentElement = Subdivisions[i][j];
-				int NextElement = -999;
-				//Assign NextElement
-				if(i == Subdivisions.length || i == Subdivisions.length - 1)
-				{
-				NextElement = Subdivisions[i - 1][k];
-				}
-				else
-				{
-					NextElement = Subdivisions[i +1][k];
-				}
-				System.out.println("CurrentElement" + CurrentElement);
-				System.out.println("NextElement" + NextElement);
-				
-			}
-		}
+		
 		return Subdivisions;
 	}
 	public int[][] Subdivide(int[] originalArray)
