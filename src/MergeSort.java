@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 public class MergeSort {
 /*create a method named subdivide(int[] originalArray)
  * {
@@ -14,7 +16,7 @@ public class MergeSort {
 	public int[][] JoinArrays(int[][] Subdivisions)
 	{
 		ArrayList<Integer> FirstHalf = new ArrayList<Integer>();
-		int[] SecondHalf;
+		List<int[]> SubsConverted = Arrays.asList(Subdivisions);
 		int[] FullArray;
 		int LowestNumber = 99999;
 		int HighestNumber = -99999;
@@ -26,11 +28,23 @@ public class MergeSort {
 			/*For these comments we will be using this array as an example:
 			 * [[3,5],[1,2],[4,6],[7,8]]
 			 * */
+			//Find the element in the original array
 			int[] CurrentElement = Subdivisions[FirstSubdivisionIndex];
 			int[] NextElement = Subdivisions[SecondSubdivisionIndex];
-			if()
-			int CurrentInt = CurrentElement[0];
-			int NextInt = NextElement[0];
+			//Find it in our list, this list changes size so double check
+			int CurrentIndex = SubsConverted.indexOf(CurrentElement);
+			int NextIndex = SubsConverted.indexOf(NextElement);
+			//Get the array inside the list
+			int[] CurrentConvert = SubsConverted.get(CurrentIndex);
+			int[] NextConvert = SubsConverted.get(NextIndex);
+			// get the first int in the array
+			int CurrentInt = CurrentConvert[0];
+			int NextInt = NextConvert[0];
+			if(CurrentInt <  NextInt)
+			{
+				FirstHalf.add(CurrentInt);
+				SubsConverted.remove(NextIndex);
+			}
 			FirstSubdivisionIndex++;
 			SecondSubdivisionIndex++;
 		}
