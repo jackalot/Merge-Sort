@@ -18,8 +18,17 @@ public class MergeSort {
 		int[] FullArray;
 		int LowestNumber = 99999;
 		int HighestNumber = -99999;
-		
-		
+		int FirstSubdivisionIndex = 0;
+		int SecondSubdivisionIndex = 1;
+		/*Access the subdivisions*/
+		int[] CurrentElement = Subdivisions[FirstSubdivisionIndex];
+		int[] NextElement = Subdivisions[SecondSubdivisionIndex];
+		int CurrentInt = CurrentElement[0];
+		int NextInt = NextElement[0];
+		System.out.println("CurrentInt " + CurrentInt );	
+		System.out.println("NextInt " + NextInt );	
+		NextInt = NextElement[1];
+		System.out.println("NextInt " + NextInt );	
 		return Subdivisions;
 	}
 	public int[][] Subdivide(int[] originalArray)
