@@ -39,28 +39,28 @@ public class MergeSort {
 		int[] FullArray;
 		int LowestNumber = 99999;
 		int HighestNumber = -99999;
-		//Increment over the outside array
-		
-		for( int i = 0; i < Subdivisions[0].length; i++ )
+		int k = 0;
+		//Do distributive property without multiplication
+		for( int i = 0; i < Subdivisions.length; i++ )
 		{
-			int ThisArray = Subdivisions[i][0];
-			int NextArray = Subdivisions[i + 1][0];
-			//is the current number bigger or smaller
-			// than the next number in the next array
-			if(ThisArray <= NextArray)
+			
+			for(int j = 0; j < Subdivisions[i].length; j++)	
 			{
-				if(LowestNumber > ThisArray)
+				int CurrentElement = Subdivisions[i][j];
+				int NextElement = -999;
+				//Assign NextElement
+				if(i == Subdivisions.length || i == Subdivisions.length - 1)
 				{
-				LowestNumber = ThisArray;
+				NextElement = Subdivisions[i - 1][k];
 				}
+				else
+				{
+					NextElement = Subdivisions[i +1][k];
+				}
+				System.out.println("CurrentElement" + CurrentElement);
+				System.out.println("NextElement" + NextElement);
+				
 			}
-			else
-			{
-				if(LowestNumber > NextArray)
-				{
-				LowestNumber = NextArray;
-				}
-			}	
 		}
 		return Subdivisions;
 	}
