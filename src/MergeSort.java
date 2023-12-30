@@ -35,7 +35,10 @@ private void AddFirstHalf(ArrayList<Integer> FirstHalf, int[][] Subdivisions)
 		 * [[1,2,3,5],[4,6,7,8]]
 		 * [1,2,3,4,5,6,7,8]
 		 * Heres what we need to do in this method:
-		 *3.  
+		 *3.  Now we know whats in the first half, lets get the arrayList in order. Lets
+		 * create a method named SortHalfArray();
+		 *
+		 *
 		 * */
 		return Subdivisions;
 	}
