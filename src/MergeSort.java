@@ -10,19 +10,9 @@ public class MergeSort {
 	 * 
 	 * }
 	 */
-public void findSmallestNum(ArrayList<Integer> FindSmallest, int Num1, int Num2, int Num3)
+private void findSmallestNum(ArrayList<Integer> FindSmallest)
 {
-	int indexOne = FindSmallest.indexOf(Num1);
-	int indexTwo = FindSmallest.indexOf(Num2);
-	int indexThree = FindSmallest.indexOf(Num3);
-	if(indexOne > -1 && indexTwo > -1 && indexThree > -1)
-	{
-	FindSmallest.remove(indexOne);
-	indexTwo = FindSmallest.indexOf(Num2);
-	FindSmallest.remove(indexTwo);
-	indexThree = FindSmallest.indexOf(Num3);
-	FindSmallest.remove(indexThree);
-	}
+
 }
 	public int[][] JoinArrays(int[][] Subdivisions) {
 		ArrayList<Integer> FirstHalf = new ArrayList<Integer>();
