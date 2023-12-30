@@ -31,10 +31,12 @@ public class MergeSort {
 			//O 
 			int SecondIntSecondArray = Subdivisions[1][1];
 			ArrayList<Integer> FindSmallest = new ArrayList<Integer>();
-			FindSmallest.add(firstIntFirstArray);
-			FindSmallest.add(SecondIntFirstArray);
-			FindSmallest.add(firstIntSecondArray);
-			FindSmallest.add(SecondIntSecondArray);
+			FindSmallest.add(firstIntFirstArray); //index 0
+			FindSmallest.add(SecondIntFirstArray);// index 1
+			FindSmallest.add(firstIntSecondArray);// index 2
+			FindSmallest.add(SecondIntSecondArray);// index 3
+			// Empty find smallest
+			
 		}
 		return Subdivisions;
 	}
