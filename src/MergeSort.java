@@ -18,6 +18,9 @@ private void findSmallestNum(ArrayList<Integer> FindSmallest)
 		ArrayList<Integer> FirstHalf = new ArrayList<Integer>();
 		// Get the length
 		int length = Subdivisions.length;
+		/*Array:
+		 * [[3, 5], [1, 2], [4, 6], [7, 8]]
+		 * */
 		return Subdivisions;
 	}
 
