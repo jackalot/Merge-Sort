@@ -18,6 +18,11 @@ private void AddFirstHalf(ArrayList<Integer> FirstHalf, int[][] Subdivisions)
 {
 	int length = Subdivisions.length;
 	int firstHalfLength = length / 2 - 1;
+	/*1. create a for loop iterating up to firstHalfLength {
+	 *2. 		at the current index, of sub array 0, add to First half
+	 *3.		at the current index, of sub array 1, add to First half
+	 * }	
+	 * */
 }
 	public int[][] JoinArrays(int[][] Subdivisions) {
 		ArrayList<Integer> FirstHalf = new ArrayList<Integer>();
