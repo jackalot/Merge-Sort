@@ -32,10 +32,9 @@ public class MergeSort {
 			FindSmallest.add(firstIntSecondArray);// index 2
 			FindSmallest.add(SecondIntSecondArray);// index 3
 			// Empty find smallest
-			
+			while (FindSmallest.size() > 1) {
 				/*
-				 * Comments Descriptions The capital letter is
-				 *  the left hand, The lower letter
+				 * Comments Descriptions The capital letter is the left hand, The lower letter
 				 * is the right hand
 				 */
 				// F-f-
@@ -55,8 +54,8 @@ public class MergeSort {
 						System.out.print(FindSmallest);
 					}
 				}
+			}
 
-			
 		}
 		return Subdivisions;
 	}
