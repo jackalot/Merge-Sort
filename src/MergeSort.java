@@ -16,37 +16,20 @@ public class MergeSort {
 	public int[][] JoinArrays(int[][] Subdivisions)
 	{
 		ArrayList<Integer> FirstHalf = new ArrayList<Integer>();
-		List<int[]> SubsConverted = Arrays.asList(Subdivisions);
-		int[] FullArray;
-		int LowestNumber = 99999;
-		int HighestNumber = -99999;
-		int FirstSubdivisionIndex = 0;
-		int SecondSubdivisionIndex = 1;
-		/*Access the subdivisions*/
-		while(FirstSubdivisionIndex < Subdivisions.length - 1)
+		//Get the length
+		int length = Subdivisions.length;
+		if(length % 2 == 0)
 		{
-			/*For these comments we will be using this array as an example:
-			 * [[3,5],[1,2],[4,6],[7,8]]
-			 * */
-			//Find the element in the original array
-			int[] CurrentElement = Subdivisions[FirstSubdivisionIndex];
-			int[] NextElement = Subdivisions[SecondSubdivisionIndex];
-			//Find it in our list, this list changes size so double check
-			int CurrentIndex = SubsConverted.indexOf(CurrentElement);
-			int NextIndex = SubsConverted.indexOf(NextElement);
-			//Get the array inside the list
-			int[] CurrentConvert = SubsConverted.get(CurrentIndex);
-			int[] NextConvert = SubsConverted.get(NextIndex);
-			// get the first int in the array
-			int CurrentInt = CurrentConvert[0];
-			int NextInt = NextConvert[0];
-			if(CurrentInt <  NextInt)
-			{
-				FirstHalf.add(CurrentInt);
-				SubsConverted.remove(NextIndex);
-			}
-			FirstSubdivisionIndex++;
-			SecondSubdivisionIndex++;
+			//F, I, F, O
+			//[3,5][1,2]
+			//F
+			int firstIntFirstArray = Subdivisions[0][0];
+			//I
+			int SecondIntFirstArray = Subdivisions[0][1];
+			//F
+			int firstIntSecondArray = Subdivisions[1][0];
+			//O 
+			int SecondIntSecondArray = Subdivisions[1][1];
 		}
 		return Subdivisions;
 	}
