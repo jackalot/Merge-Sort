@@ -30,6 +30,11 @@ public class MergeSort {
 			int firstIntSecondArray = Subdivisions[1][0];
 			//O 
 			int SecondIntSecondArray = Subdivisions[1][1];
+			ArrayList<Integer> FindSmallest = new ArrayList<Integer>();
+			FindSmallest.add(firstIntFirstArray);
+			FindSmallest.add(SecondIntFirstArray);
+			FindSmallest.add(firstIntSecondArray);
+			FindSmallest.add(SecondIntSecondArray);
 		}
 		return Subdivisions;
 	}
