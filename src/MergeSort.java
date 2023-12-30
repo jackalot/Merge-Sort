@@ -20,6 +20,12 @@ private void findSmallestNum(ArrayList<Integer> FindSmallest)
 		int length = Subdivisions.length;
 		/*Array:
 		 * [[3, 5], [1, 2], [4, 6], [7, 8]]
+		 * We need it to be:
+		 * [[1,2,3,5],[4,6,7,8]]
+		 * [1,2,3,4,5,6,7,8]
+		 * Heres what we need to do in this method:
+		 *1. 
+		 *2.  
 		 * */
 		return Subdivisions;
 	}
