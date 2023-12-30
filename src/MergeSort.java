@@ -12,23 +12,24 @@ public class MergeSort {
 	 */
 private void SortHalfArray(ArrayList<Integer> FirstHalf)
 {
-	
+	/**/
 }
 private void AddFirstHalf(ArrayList<Integer> FirstHalf, int[][] Subdivisions)
 {
 	int length = Subdivisions.length;
 	int firstHalfLength = length / 2 - 1;
-	/*1. create a for loop iterating up to firstHalfLength {
-	 *2. 		at the current index, of sub array 0, add to First half
-	 *3.		at the current index, of sub array 1, add to First half
-	 * }	
-	 * */
+	for(int x = 0; x < firstHalfLength; x++)
+	{
+		FirstHalf.add(Subdivisions[x][0]);
+		FirstHalf.add(Subdivisions[x][1]);
+	}
 }
 	public int[][] JoinArrays(int[][] Subdivisions) {
 		ArrayList<Integer> FirstHalf = new ArrayList<Integer>();
 		// Get the length
 		int length = Subdivisions.length;
 		int firstHalfLength = length / 2 - 1;
+		AddFirstHalf(FirstHalf, Subdivisions);
 		/*Array:
 		 * [[3, 5], [1, 2], [4, 6], [7, 8]]
 		 * We need it to be:
