@@ -1,63 +1,82 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
 public class MergeSort {
-/*create a method named subdivide(int[] originalArray)
- * {
- *  find the length of the array
- *  if the length of the array is odd {
- * 		indexOne starts at 0 
- * 		indexTwo which starts at 1
- * 		for the length of the array {
- * 			
- * }
- * */
-	
-	public int[][] JoinArrays(int[][] Subdivisions)
-	{
+	/*
+	 * create a method named subdivide(int[] originalArray) { find the length of the
+	 * array if the length of the array is odd { indexOne starts at 0 indexTwo which
+	 * starts at 1 for the length of the array {
+	 * 
+	 * }
+	 */
+
+	public int[][] JoinArrays(int[][] Subdivisions) {
 		ArrayList<Integer> FirstHalf = new ArrayList<Integer>();
-		//Get the length
+		// Get the length
 		int length = Subdivisions.length;
-		if(length % 2 == 0)
-		{
-			//F, I, F, O
-			//[3,5][1,2]
-			//F
+		if (length % 2 == 0) {
+			// F, I, F, O
+			// [3,5][1,2]
+			// F
 			int firstIntFirstArray = Subdivisions[0][0];
-			//I
+			// I
 			int SecondIntFirstArray = Subdivisions[0][1];
-			//F
+			// F
 			int firstIntSecondArray = Subdivisions[1][0];
-			//O 
+			// O
 			int SecondIntSecondArray = Subdivisions[1][1];
 			ArrayList<Integer> FindSmallest = new ArrayList<Integer>();
-			FindSmallest.add(firstIntFirstArray); //index 0
+			FindSmallest.add(firstIntFirstArray); // index 0
 			FindSmallest.add(SecondIntFirstArray);// index 1
 			FindSmallest.add(firstIntSecondArray);// index 2
 			FindSmallest.add(SecondIntSecondArray);// index 3
 			// Empty find smallest
 			
+				/*
+				 * Comments Descriptions The capital letter is
+				 *  the left hand, The lower letter
+				 * is the right hand
+				 */
+				// F-f-
+				if (firstIntFirstArray <= firstIntSecondArray) {
+					// F--o
+					if (firstIntFirstArray <= SecondIntSecondArray) {
+						int index = FindSmallest.indexOf(SecondIntSecondArray);
+						FindSmallest.remove(index);
+					}
+				}
+				// f-F-
+				if (firstIntSecondArray <= firstIntFirstArray) {
+					// -iF-
+					if (firstIntFirstArray <= SecondIntFirstArray) {
+						int index = FindSmallest.indexOf(SecondIntFirstArray);
+						FindSmallest.remove(index);
+						System.out.print(FindSmallest);
+					}
+				}
+
+			
 		}
 		return Subdivisions;
 	}
-	public int[][] Subdivide(int[] originalArray)
-	{
+
+	public int[][] Subdivide(int[] originalArray) {
 		int length = originalArray.length;
 		int IndexOne;
 		int IndexTwo;
 		int[][] newArray = new int[0][0];
-		if(length % 2 == 0) // even
+		if (length % 2 == 0) // even
 		{
 			// Its even, make the length half so that
 			// we don't have nulls
 			newArray = new int[length / 2][];
-			//These two find the numbers for our original array
+			// These two find the numbers for our original array
 			IndexOne = 0;
 			IndexTwo = 1;
-			for(int i = 0;IndexTwo < length; i++)
-			{
-				int[] Nums = {-1, -1};
-				//Add the current numbers in the
+			for (int i = 0; IndexTwo < length; i++) {
+				int[] Nums = { -1, -1 };
+				// Add the current numbers in the
 				// original array
 				Nums[0] = originalArray[IndexOne];
 				Nums[1] = originalArray[IndexTwo];
@@ -66,24 +85,21 @@ public class MergeSort {
 				IndexOne += 2;// odd positions
 				IndexTwo += 2;// even positions
 			}
-		}
-		else //odd
+		} else // odd
 		{
-			
+
 		}
 		return newArray;
 	}
-public int[][] SwapSubdivisions(int[][] Subdivisions)
-{
-	for(int x = 0; x < Subdivisions.length; x++)
-	{
-		if(Subdivisions[x][0] > Subdivisions[x][1])
-		{
-			int Swap = Subdivisions[x][0];
-			Subdivisions[x][0] = Subdivisions[x][1];
-			Subdivisions[x][1] = Swap;
+
+	public int[][] SwapSubdivisions(int[][] Subdivisions) {
+		for (int x = 0; x < Subdivisions.length; x++) {
+			if (Subdivisions[x][0] > Subdivisions[x][1]) {
+				int Swap = Subdivisions[x][0];
+				Subdivisions[x][0] = Subdivisions[x][1];
+				Subdivisions[x][1] = Swap;
+			}
 		}
+		return Subdivisions;
 	}
-	return Subdivisions;
-}
 }
