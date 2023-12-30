@@ -10,7 +10,20 @@ public class MergeSort {
 	 * 
 	 * }
 	 */
-
+public void findSmallestNum(ArrayList<Integer> FindSmallest, int Num1, int Num2, int Num3)
+{
+	int indexOne = FindSmallest.indexOf(Num1);
+	int indexTwo = FindSmallest.indexOf(Num2);
+	int indexThree = FindSmallest.indexOf(Num3);
+	if(indexOne > -1 && indexTwo > -1 && indexThree > -1)
+	{
+	FindSmallest.remove(indexOne);
+	indexTwo = FindSmallest.indexOf(Num2);
+	FindSmallest.remove(indexTwo);
+	indexThree = FindSmallest.indexOf(Num3);
+	FindSmallest.remove(indexThree);
+	}
+}
 	public int[][] JoinArrays(int[][] Subdivisions) {
 		ArrayList<Integer> FirstHalf = new ArrayList<Integer>();
 		// Get the length
@@ -54,18 +67,9 @@ public class MergeSort {
 					if (firstIntSecondArray <= SecondIntFirstArray) {
 						// in [3,5],[1,2]
 						// 5,2,3 should be removed
-						int indexOne = FindSmallest.indexOf(firstIntFirstArray);
-						int indexTwo = FindSmallest.indexOf(SecondIntFirstArray);
-						int indexThree = FindSmallest.indexOf(SecondIntSecondArray);
-						if(indexOne > -1 && indexTwo > -1 && indexThree > -1)
-						{
-						FindSmallest.remove(indexOne);
-						indexTwo = FindSmallest.indexOf(SecondIntFirstArray);
-						FindSmallest.remove(indexTwo);
-						indexThree = FindSmallest.indexOf(SecondIntSecondArray);
-						FindSmallest.remove(indexThree);
+						findSmallestNum(FindSmallest, firstIntFirstArray,
+								SecondIntFirstArray, SecondIntSecondArray);
 						System.out.print(FindSmallest);
-						}
 					}
 				}
 			}
