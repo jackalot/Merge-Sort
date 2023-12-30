@@ -14,9 +14,10 @@ private void findSmallestNum(ArrayList<Integer> FindSmallest)
 {
 
 }
-private void AddFirstHalf(ArrayList<Integer> FirstHalf, int[][] Subdivisions, int firstHalfLength)
+private void AddFirstHalf(ArrayList<Integer> FirstHalf, int[][] Subdivisions)
 {
-	
+	int length = Subdivisions.length;
+	int firstHalfLength = length / 2 - 1;
 }
 	public int[][] JoinArrays(int[][] Subdivisions) {
 		ArrayList<Integer> FirstHalf = new ArrayList<Integer>();
