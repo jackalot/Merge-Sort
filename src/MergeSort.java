@@ -42,7 +42,10 @@ public class MergeSort {
 					// F--o
 					if (firstIntFirstArray <= SecondIntSecondArray) {
 						int index = FindSmallest.indexOf(SecondIntSecondArray);
+						if (index > -1)
+						{
 						FindSmallest.remove(index);
+						}
 					}
 				}
 				// f-F-
@@ -50,8 +53,11 @@ public class MergeSort {
 					// -iF-
 					if (firstIntFirstArray <= SecondIntFirstArray) {
 						int index = FindSmallest.indexOf(SecondIntFirstArray);
+						if(index > -1)
+						{
 						FindSmallest.remove(index);
 						System.out.print(FindSmallest);
+						}
 					}
 				}
 			}
