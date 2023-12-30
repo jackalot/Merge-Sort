@@ -14,6 +14,10 @@ private void findSmallestNum(ArrayList<Integer> FindSmallest)
 {
 
 }
+private void AddFirstHalf(ArrayList<Integer> FirstHalf, int[][] Subdivisions, int firstHalfLength)
+{
+	
+}
 	public int[][] JoinArrays(int[][] Subdivisions) {
 		ArrayList<Integer> FirstHalf = new ArrayList<Integer>();
 		// Get the length
@@ -25,11 +29,6 @@ private void findSmallestNum(ArrayList<Integer> FindSmallest)
 		 * [[1,2,3,5],[4,6,7,8]]
 		 * [1,2,3,4,5,6,7,8]
 		 * Heres what we need to do in this method:
-		 *1. get the length of the array, halve it, -1,
-		 *call it it firstHalfLength
-		 *2. create a method named AddFirstHalf(),
-		 * this should add the first half to the first
-		 *  half arrayList
 		 *3.  
 		 * */
 		return Subdivisions;
