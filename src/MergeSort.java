@@ -30,6 +30,7 @@ private void AddFirstHalf(ArrayList<Integer> FirstHalf, int[][] Subdivisions)
 		int length = Subdivisions.length;
 		int firstHalfLength = length / 2 - 1;
 		AddFirstHalf(FirstHalf, Subdivisions);
+		System.out.println(FirstHalf);
 		/*Array:
 		 * [[3, 5], [1, 2], [4, 6], [7, 8]]
 		 * We need it to be:
