@@ -10,7 +10,10 @@ public class MergeSort {
 	 * 
 	 * }
 	 */
-
+private void SortHalfArray(ArrayList<Integer> FirstHalf)
+{
+	
+}
 private void AddFirstHalf(ArrayList<Integer> FirstHalf, int[][] Subdivisions)
 {
 	int length = Subdivisions.length;
