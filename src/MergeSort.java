@@ -51,11 +51,19 @@ public class MergeSort {
 				// f-F-
 				if (firstIntSecondArray <= firstIntFirstArray) {
 					// -iF-
-					if (firstIntFirstArray <= SecondIntFirstArray) {
-						int index = FindSmallest.indexOf(SecondIntFirstArray);
-						if(index > -1)
+					if (firstIntSecondArray <= SecondIntFirstArray) {
+						// in [3,5],[1,2]
+						// 5,2,3 should be removed
+						int indexOne = FindSmallest.indexOf(firstIntFirstArray);
+						int indexTwo = FindSmallest.indexOf(SecondIntFirstArray);
+						int indexThree = FindSmallest.indexOf(SecondIntSecondArray);
+						if(indexOne > -1 && indexTwo > -1 && indexThree > -1)
 						{
-						FindSmallest.remove(index);
+						FindSmallest.remove(indexOne);
+						indexTwo = FindSmallest.indexOf(SecondIntFirstArray);
+						FindSmallest.remove(indexTwo);
+						indexThree = FindSmallest.indexOf(SecondIntSecondArray);
+						FindSmallest.remove(indexThree);
 						System.out.print(FindSmallest);
 						}
 					}
