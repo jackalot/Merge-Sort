@@ -28,53 +28,6 @@ public void findSmallestNum(ArrayList<Integer> FindSmallest, int Num1, int Num2,
 		ArrayList<Integer> FirstHalf = new ArrayList<Integer>();
 		// Get the length
 		int length = Subdivisions.length;
-		if (length % 2 == 0) {
-			// F, I, F, O
-			// [3,5][1,2]
-			// F
-			int firstIntFirstArray = Subdivisions[0][0];
-			// I
-			int SecondIntFirstArray = Subdivisions[0][1];
-			// F
-			int firstIntSecondArray = Subdivisions[1][0];
-			// O
-			int SecondIntSecondArray = Subdivisions[1][1];
-			ArrayList<Integer> FindSmallest = new ArrayList<Integer>();
-			FindSmallest.add(firstIntFirstArray); // index 0
-			FindSmallest.add(SecondIntFirstArray);// index 1
-			FindSmallest.add(firstIntSecondArray);// index 2
-			FindSmallest.add(SecondIntSecondArray);// index 3
-			// Empty find smallest
-			while (FindSmallest.size() > 1) {
-				/*
-				 * Comments Descriptions The capital letter is the left hand, The lower letter
-				 * is the right hand
-				 */
-				// F-f-
-				if (firstIntFirstArray <= firstIntSecondArray) {
-					// F--o
-					if (firstIntFirstArray <= SecondIntSecondArray) {
-						int index = FindSmallest.indexOf(SecondIntSecondArray);
-						if (index > -1)
-						{
-						FindSmallest.remove(index);
-						}
-					}
-				}
-				// f-F-
-				if (firstIntSecondArray <= firstIntFirstArray) {
-					// -iF-
-					if (firstIntSecondArray <= SecondIntFirstArray) {
-						// in [3,5],[1,2]
-						// 5,2,3 should be removed
-						findSmallestNum(FindSmallest, firstIntFirstArray,
-								SecondIntFirstArray, SecondIntSecondArray);
-						System.out.print(FindSmallest);
-					}
-				}
-			}
-
-		}
 		return Subdivisions;
 	}
 
