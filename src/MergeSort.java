@@ -10,10 +10,7 @@ public class MergeSort {
 	 * 
 	 * }
 	 */
-private void findSmallestNum(ArrayList<Integer> FindSmallest)
-{
 
-}
 private void AddFirstHalf(ArrayList<Integer> FirstHalf, int[][] Subdivisions)
 {
 	int length = Subdivisions.length;
