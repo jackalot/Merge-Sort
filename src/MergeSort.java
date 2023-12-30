@@ -17,7 +17,7 @@ private void SortHalfArray(ArrayList<Integer> FirstHalf)
 private void AddFirstHalf(ArrayList<Integer> FirstHalf, int[][] Subdivisions)
 {
 	int length = Subdivisions.length;
-	int firstHalfLength = length / 2 - 1;
+	int firstHalfLength = length / 2;
 	for(int x = 0; x < firstHalfLength; x++)
 	{
 		FirstHalf.add(Subdivisions[x][0]);
