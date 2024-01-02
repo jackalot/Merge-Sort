@@ -16,7 +16,12 @@ private void SortHalfArray(ArrayList<Integer> FirstHalf)
 	ArrayList<Integer> sortedFirstHalf = new ArrayList<Integer>();
 	int smallestNum =  unsortedFirstHalf.get(0);
 	int largestNum = unsortedFirstHalf.get(0);
+	for(int x = 0; x < unsortedFirstHalf.size() - 1; x++)
+	{
 	
+	}
+	System.out.println(largestNum);
+	System.out.println(smallestNum);
 	/*1.Create a new array list called sortedFirstHalf
 	 *2. create a variable named SmallestNum, set it to index 0
 	 *3. create a variable named LargestNum, set it to index 0
