@@ -39,6 +39,14 @@ private void SortHalfArray(ArrayList<Integer> FirstHalf)
 	System.out.println(smallestNum);
 	/*We know the biggest and largest numbers,
 	 * so now find the order
+	 * 1. remove smallestNum from unsortedFirstHalf
+	 * 2. remove largestNum from unsortedFirstHalf
+	 * 3. create variable named medianNum, we will 
+	 * use this to check if we are between the smallest and highest
+	 * 4. loop through unsortedFirstHalf {
+	 * 		1. store the indexes with currentNum and nextNum again
+	 * 		2.
+	 * }
 	 **/
 
 }
