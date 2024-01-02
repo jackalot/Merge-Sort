@@ -18,7 +18,8 @@ private void SortHalfArray(ArrayList<Integer> FirstHalf)
 	int largestNum = unsortedFirstHalf.get(0);
 	for(int x = 0; x < unsortedFirstHalf.size() - 1; x++)
 	{
-	
+		int currentNum = unsortedFirstHalf.get(x);
+		int nextNum = unsortedFirstHalf.get(x + 1);
 	}
 	System.out.println(largestNum);
 	System.out.println(smallestNum);
