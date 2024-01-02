@@ -12,6 +12,11 @@ public class MergeSort {
 	 */
 private void SortHalfArray(ArrayList<Integer> FirstHalf)
 {
+	ArrayList<Integer> unsortedFirstHalf = FirstHalf;
+	ArrayList<Integer> sortedFirstHalf = new ArrayList<Integer>();
+	int smallestNum =  unsortedFirstHalf.get(0);
+	int largestNum = unsortedFirstHalf.get(0);
+	
 	/*1.Create a new array list called sortedFirstHalf
 	 *2. create a variable named SmallestNum, set it to index 0
 	 *3. create a variable named LargestNum, set it to index 0
