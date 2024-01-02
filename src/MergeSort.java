@@ -12,7 +12,32 @@ public class MergeSort {
 	 */
 private void SortHalfArray(ArrayList<Integer> FirstHalf)
 {
-	/**/
+	/*1.Create a new array list called sortedFirstHalf
+	 *2. create a variable named SmallestNum, set it to index 0
+	 *3. create a variable named LargestNum, set it to index 0
+	 *4. create a for loop, loop through the array
+	 *{
+	 *	1. check the current index and call it currentNum
+	 *	2. check the next index and call it nextNum
+	 *  3. if currentNum is less than nextNum
+	 *  {
+	 *  	1. if curretNum is less than SmaallestNum
+	 * 		{
+	 *  		1. set SmallestNum to it
+	 *  	}
+	 *  }
+	 *  4. if currentNum is greater than nextNum
+	 *  {
+	 *  	1. if curretNum is greater than LargestNum
+	 * 		{
+	 *  		1. set LargestNum to it
+	 *  	}
+	 *  }  	
+	 *}//loop ends
+	 *	We know the biggest and largest numbers,
+	 * so now find the order
+	 **/
+
 }
 private void AddFirstHalf(ArrayList<Integer> FirstHalf, int[][] Subdivisions)
 {
@@ -30,6 +55,7 @@ private void AddFirstHalf(ArrayList<Integer> FirstHalf, int[][] Subdivisions)
 		int length = Subdivisions.length;
 		int firstHalfLength = length / 2 - 1;
 		AddFirstHalf(FirstHalf, Subdivisions);
+		SortHalfArray(FirstHalf);
 		System.out.println(FirstHalf);
 		/*Array:
 		 * [[3, 5], [1, 2], [4, 6], [7, 8]]
