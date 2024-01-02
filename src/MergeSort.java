@@ -20,6 +20,20 @@ private void SortHalfArray(ArrayList<Integer> FirstHalf)
 	{
 		int currentNum = unsortedFirstHalf.get(x);
 		int nextNum = unsortedFirstHalf.get(x + 1);
+		if(currentNum < nextNum)
+		{
+			if(currentNum < smallestNum)
+			{
+				smallestNum = currentNum;
+			}
+		}
+		if(currentNum > nextNum)
+		{
+			if(currentNum > largestNum)
+			{
+				largestNum = currentNum;
+			}
+		}
 	}
 	System.out.println(largestNum);
 	System.out.println(smallestNum);
