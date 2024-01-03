@@ -1,87 +1,130 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class MergeSort {
-/*create a method named subdivide(int[] originalArray)
- * {
- *  find the length of the array
- *  if the length of the array is odd {
- * 		indexOne starts at 0 
- * 		indexTwo which starts at 1
- * 		for the length of the array {
- * 			
- * }
- * */
-	/*JoinArrays()
-	 * {
-	 * in our nested array example, the array currently, looks like this:
-	 *	[[3, 5], [1, 2], [4, 6], [7, 8]]
-	 *and we need to get it to this:
-	 *	[[1,2,3,5], [4, 6, 7, 8]]
-	 *Set first half to Half of our 2dArray
-	 *	set second half to Half of our 2dArray
-	 *
-	 *	this is index [0][Y] of Subdivisions
-	 *	and [1][Y] 
-	 *	With [3, 5] and [1, 2]
-	 *	Check 3 and 1
-	 *		1 is less than 3 so thats the new less
-	 *		add it to index 0 of FirstHalf
-	 *	Check 3 and 2
-	 *		2 is less than 3 so thats the new less
-	 *		add it to index 1 of FirstHalf
-	 *
+	/*
+	 * create a method named subdivide(int[] originalArray) { find the length of the
+	 * array if the length of the array is odd { indexOne starts at 0 indexTwo which
+	 * starts at 1 for the length of the array {
 	 * 
-	 *}
-	 * */
-	public int[][] JoinArrays(int[][] Subdivisions)
+	 * }
+	 */
+private ArrayList<Integer> SortHalfArray(ArrayList<Integer> HalfArray)
+{
+	ArrayList<Integer> unsortedFirstHalf = HalfArray;
+	ArrayList<Integer> sortedFirstHalf = new ArrayList<Integer>();
+	int smallestNum =  unsortedFirstHalf.get(0);
+	int largestNum = unsortedFirstHalf.get(0);
+	//Find the smallest, and largest in the array
+	for(int x = 0; x < unsortedFirstHalf.size() - 1; x++)
 	{
-		int[] FirstHalf;
-		int[] SecondHalf;
-		int[] FullArray;
-		int LowestNumber = 99999;
-		int HighestNumber = -99999;
-		int k = 0;
-		//Do distributive property without multiplication
-		for( int i = 0; i < Subdivisions.length; i++ )
+		int currentNum = unsortedFirstHalf.get(x);
+		int nextNum = unsortedFirstHalf.get(x + 1);
+		//Compare the current and next number,
+		// find the smallest/greatest and store it
+		if(currentNum < nextNum)
 		{
-			
-			for(int j = 0; j < Subdivisions[i].length; j++)	
+			if(currentNum < smallestNum)
 			{
-				int CurrentElement = Subdivisions[i][j];
-				int NextElement = -999;
-				//Assign NextElement
-				if(i == Subdivisions.length || i == Subdivisions.length - 1)
-				{
-				NextElement = Subdivisions[i - 1][k];
-				}
-				else
-				{
-					NextElement = Subdivisions[i +1][k];
-				}
-				System.out.println("CurrentElement" + CurrentElement);
-				System.out.println("NextElement" + NextElement);
-				
+				smallestNum = currentNum;
 			}
 		}
+		if(currentNum > nextNum)
+		{
+			if(currentNum > largestNum)
+			{
+				largestNum = currentNum;
+			}
+		}
+	}
+	System.out.println(largestNum);
+	System.out.println(smallestNum);
+	//Add the smallest to our sorted list
+	sortedFirstHalf.add(smallestNum);
+	//remove smallest and biggest from the unsortedList
+	int index =  unsortedFirstHalf.indexOf(largestNum);
+	unsortedFirstHalf.remove(index);
+		index =  unsortedFirstHalf.indexOf(smallestNum);
+	unsortedFirstHalf.remove(index);
+	//sort through the list, see if its in order
+	while(unsortedFirstHalf.isEmpty() == false)
+	{
+		int medianNum = 0;
+		//Get all numbers below the median and set that to 
+		// be removed next iteration of outer loop
+		for(int x = 0; x < unsortedFirstHalf.size(); x++)
+		{
+			int currentNum = unsortedFirstHalf.get(x);
+			//any number lower than the current 
+			// median is our next number in the list
+			if(medianNum == 0)
+			{
+				medianNum = currentNum;
+			}
+			if(currentNum < medianNum)
+			{
+				medianNum = currentNum;
+			}
+		}
+		//Remove the median from the unordered list, 
+		// add it to the sorted list 
+		index =  unsortedFirstHalf.indexOf(medianNum);
+		unsortedFirstHalf.remove(index);
+		sortedFirstHalf.add(medianNum);
+	}
+	sortedFirstHalf.add(largestNum);
+	return sortedFirstHalf;
+
+}
+private void AddFirstHalf(ArrayList<Integer> FirstHalf, int[][] Subdivisions)
+{
+	int length = Subdivisions.length;
+	int firstHalfLength = length / 2;
+	for(int x = 0; x < firstHalfLength; x++)
+	{
+		FirstHalf.add(Subdivisions[x][0]);
+		FirstHalf.add(Subdivisions[x][1]);
+	}
+}
+	public int[][] JoinArrays(int[][] Subdivisions) {
+		ArrayList<Integer> FirstHalf = new ArrayList<Integer>();
+		// Get the length
+		int length = Subdivisions.length;
+		int firstHalfLength = length / 2 - 1;
+		AddFirstHalf(FirstHalf, Subdivisions);
+		FirstHalf = SortHalfArray(FirstHalf);
+		System.out.print(FirstHalf);
+		/*Array:
+		 * [[3, 5], [1, 2], [4, 6], [7, 8]]
+		 * We need it to be:
+		 * [[1,2,3,5],[4,6,7,8]]
+		 * [1,2,3,4,5,6,7,8]
+		 * Heres what we need to do in this method:
+		 *3.  Now we know whats in the first half, lets get the arrayList in order. Lets
+		 * create a method named SortHalfArray();
+		 *
+		 *
+		 * */
 		return Subdivisions;
 	}
-	public int[][] Subdivide(int[] originalArray)
-	{
+
+	public int[][] Subdivide(int[] originalArray) {
 		int length = originalArray.length;
 		int IndexOne;
 		int IndexTwo;
 		int[][] newArray = new int[0][0];
-		if(length % 2 == 0) // even
+		if (length % 2 == 0) // even
 		{
 			// Its even, make the length half so that
 			// we don't have nulls
 			newArray = new int[length / 2][];
-			//These two find the numbers for our original array
+			// These two find the numbers for our original array
 			IndexOne = 0;
 			IndexTwo = 1;
-			for(int i = 0;IndexTwo < length; i++)
-			{
-				int[] Nums = {-1, -1};
-				//Add the current numbers in the
+			for (int i = 0; IndexTwo < length; i++) {
+				int[] Nums = { -1, -1 };
+				// Add the current numbers in the
 				// original array
 				Nums[0] = originalArray[IndexOne];
 				Nums[1] = originalArray[IndexTwo];
@@ -90,24 +133,21 @@ public class MergeSort {
 				IndexOne += 2;// odd positions
 				IndexTwo += 2;// even positions
 			}
-		}
-		else //odd
+		} else // odd
 		{
-			
+
 		}
 		return newArray;
 	}
-public int[][] SwapSubdivisions(int[][] Subdivisions)
-{
-	for(int x = 0; x < Subdivisions.length; x++)
-	{
-		if(Subdivisions[x][0] > Subdivisions[x][1])
-		{
-			int Swap = Subdivisions[x][0];
-			Subdivisions[x][0] = Subdivisions[x][1];
-			Subdivisions[x][1] = Swap;
+
+	public int[][] SwapSubdivisions(int[][] Subdivisions) {
+		for (int x = 0; x < Subdivisions.length; x++) {
+			if (Subdivisions[x][0] > Subdivisions[x][1]) {
+				int Swap = Subdivisions[x][0];
+				Subdivisions[x][0] = Subdivisions[x][1];
+				Subdivisions[x][1] = Swap;
+			}
 		}
+		return Subdivisions;
 	}
-	return Subdivisions;
-}
 }
