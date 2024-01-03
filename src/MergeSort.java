@@ -44,9 +44,26 @@ private void SortHalfArray(ArrayList<Integer> FirstHalf)
 	unsortedFirstHalf.remove(index);
 		index =  unsortedFirstHalf.indexOf(smallestNum);
 	unsortedFirstHalf.remove(index);
+	//sort through the list, see if its in order
 	while(unsortedFirstHalf.isEmpty() == false)
 	{
-		
+		int medianNum = 0;
+		//Get all numbers below the median and set that to 
+		// be removed next iteration of outer loop
+		for(int x = 0; x < unsortedFirstHalf.size(); x++)
+		{
+			int currentNum = unsortedFirstHalf.get(x);
+			//any number lower than the current 
+			// median is our next number in the list
+			if(medianNum == 0)
+			{
+				medianNum = currentNum;
+			}
+			if(currentNum < medianNum)
+			{
+				medianNum = currentNum;
+			}
+		}
 	}
 	sortedFirstHalf.add(largestNum);
 	System.out.print(sortedFirstHalf);
