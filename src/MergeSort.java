@@ -89,7 +89,13 @@ private void AddFirstHalf(ArrayList<Integer> FirstHalf, int[][] Subdivisions)
 }
 private void AddSecondHalf(ArrayList<Integer> SecondHalf, int[][] Subdivisions)
 {
-	
+	int length = Subdivisions.length;
+	int firstHalfLength = length / 2;
+	for(int x = firstHalfLength; x < length; x++)
+	{
+		SecondHalf.add(Subdivisions[x][0]);
+		SecondHalf.add(Subdivisions[x][1]);
+	}
 }
 	public int[][] JoinArrays(int[][] Subdivisions) {
 		ArrayList<Integer> FirstHalf = new ArrayList<Integer>();
