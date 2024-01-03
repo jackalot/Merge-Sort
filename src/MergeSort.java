@@ -106,6 +106,7 @@ private void AddSecondHalf(ArrayList<Integer> SecondHalf, int[][] Subdivisions)
 		AddFirstHalf(FirstHalf, Subdivisions);
 		AddSecondHalf(SecondHalf, Subdivisions);
 		FirstHalf = SortHalfArray(FirstHalf);
+		SecondHalf = SortHalfArray(SecondHalf);
 		System.out.print(SecondHalf);
 		/*Array:
 		 * [[3, 5], [1, 2], [4, 6], [7, 8]]
