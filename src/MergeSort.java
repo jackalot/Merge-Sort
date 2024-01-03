@@ -64,6 +64,11 @@ private void SortHalfArray(ArrayList<Integer> FirstHalf)
 				medianNum = currentNum;
 			}
 		}
+		//Remove the median from the unordered list, 
+		// add it to the sorted list 
+		index =  unsortedFirstHalf.indexOf(medianNum);
+		unsortedFirstHalf.remove(index);
+		sortedFirstHalf.add(medianNum);
 	}
 	sortedFirstHalf.add(largestNum);
 	System.out.print(sortedFirstHalf);
