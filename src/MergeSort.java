@@ -16,10 +16,13 @@ private ArrayList<Integer> SortHalfArray(ArrayList<Integer> HalfArray)
 	ArrayList<Integer> sortedFirstHalf = new ArrayList<Integer>();
 	int smallestNum =  unsortedFirstHalf.get(0);
 	int largestNum = unsortedFirstHalf.get(0);
+	//Find the smallest, and largest in the array
 	for(int x = 0; x < unsortedFirstHalf.size() - 1; x++)
 	{
 		int currentNum = unsortedFirstHalf.get(x);
 		int nextNum = unsortedFirstHalf.get(x + 1);
+		//Compare the current and next number,
+		// find the smallest/greatest and store it
 		if(currentNum < nextNum)
 		{
 			if(currentNum < smallestNum)
