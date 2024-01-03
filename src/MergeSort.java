@@ -10,9 +10,9 @@ public class MergeSort {
 	 * 
 	 * }
 	 */
-private ArrayList<Integer> SortHalfArray(ArrayList<Integer> FirstHalf)
+private ArrayList<Integer> SortHalfArray(ArrayList<Integer> HalfArray)
 {
-	ArrayList<Integer> unsortedFirstHalf = FirstHalf;
+	ArrayList<Integer> unsortedFirstHalf = HalfArray;
 	ArrayList<Integer> sortedFirstHalf = new ArrayList<Integer>();
 	int smallestNum =  unsortedFirstHalf.get(0);
 	int largestNum = unsortedFirstHalf.get(0);
