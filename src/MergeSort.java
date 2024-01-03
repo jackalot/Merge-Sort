@@ -10,7 +10,7 @@ public class MergeSort {
 	 * 
 	 * }
 	 */
-private void SortHalfArray(ArrayList<Integer> FirstHalf)
+private ArrayList<Integer> SortHalfArray(ArrayList<Integer> FirstHalf)
 {
 	ArrayList<Integer> unsortedFirstHalf = FirstHalf;
 	ArrayList<Integer> sortedFirstHalf = new ArrayList<Integer>();
@@ -71,8 +71,7 @@ private void SortHalfArray(ArrayList<Integer> FirstHalf)
 		sortedFirstHalf.add(medianNum);
 	}
 	sortedFirstHalf.add(largestNum);
-	System.out.print(sortedFirstHalf);
-	
+	return sortedFirstHalf;
 
 }
 private void AddFirstHalf(ArrayList<Integer> FirstHalf, int[][] Subdivisions)
@@ -91,7 +90,8 @@ private void AddFirstHalf(ArrayList<Integer> FirstHalf, int[][] Subdivisions)
 		int length = Subdivisions.length;
 		int firstHalfLength = length / 2 - 1;
 		AddFirstHalf(FirstHalf, Subdivisions);
-		SortHalfArray(FirstHalf);
+		FirstHalf = SortHalfArray(FirstHalf);
+		System.out.print(FirstHalf);
 		/*Array:
 		 * [[3, 5], [1, 2], [4, 6], [7, 8]]
 		 * We need it to be:
