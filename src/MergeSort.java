@@ -89,12 +89,14 @@ private void AddFirstHalf(ArrayList<Integer> FirstHalf, int[][] Subdivisions)
 }
 	public int[][] JoinArrays(int[][] Subdivisions) {
 		ArrayList<Integer> FirstHalf = new ArrayList<Integer>();
+		ArrayList<Integer> SecondHalf = new ArrayList<Integer>();
 		// Get the length
 		int length = Subdivisions.length;
 		int firstHalfLength = length / 2 - 1;
 		AddFirstHalf(FirstHalf, Subdivisions);
+		AddSecondHalf(SecondHalf, Subdivisions);
 		FirstHalf = SortHalfArray(FirstHalf);
-		System.out.print(FirstHalf);
+		System.out.print(SecondHalf);
 		/*Array:
 		 * [[3, 5], [1, 2], [4, 6], [7, 8]]
 		 * We need it to be:
