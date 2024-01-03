@@ -12,6 +12,57 @@ public class MergeSort {
 	 */
 private void SortHalfArray(ArrayList<Integer> FirstHalf)
 {
+	ArrayList<Integer> unsortedFirstHalf = FirstHalf;
+	ArrayList<Integer> sortedFirstHalf = new ArrayList<Integer>();
+	int smallestNum =  unsortedFirstHalf.get(0);
+	int largestNum = unsortedFirstHalf.get(0);
+	for(int x = 0; x < unsortedFirstHalf.size() - 1; x++)
+	{
+		int currentNum = unsortedFirstHalf.get(x);
+		int nextNum = unsortedFirstHalf.get(x + 1);
+		if(currentNum < nextNum)
+		{
+			if(currentNum < smallestNum)
+			{
+				smallestNum = currentNum;
+			}
+		}
+		if(currentNum > nextNum)
+		{
+			if(currentNum > largestNum)
+			{
+				largestNum = currentNum;
+			}
+		}
+	}
+	System.out.println(largestNum);
+	System.out.println(smallestNum);
+	/*We know the biggest and largest numbers,
+	 * so now find the order
+	 * 1. remove smallestNum from unsortedFirstHalf
+	 * 2. remove largestNum from unsortedFirstHalf
+	 * 3. create variable named medianNum, we will 
+	 * use this to check if we are between the smallest and highest
+	 * 4. loop through unsortedFirstHalf twice, on the inner loop
+	 * { 	
+	 * 		SECOND LOOP
+	 * 		{
+	 * 		1. store the indexes with currentNum and 
+	 * 			nextNum again
+	 * 		2. store the current num as the medianNum 
+	 * 			if medianNum is empty/0
+	 * 		3. check if the current number is less than 
+	 * 			the medianNum
+	 * 			{
+	 * 				set Current Num as the median Num
+	 * 			}
+	 * 		}// LOOP END
+	 * 		1. now that the inner loop ends, check medianNum
+	 * 		and remove it from the array list but add it to our new list
+	 * 	 }
+	 * }
+	 **/
+
 }
 private void AddFirstHalf(ArrayList<Integer> FirstHalf, int[][] Subdivisions)
 {
