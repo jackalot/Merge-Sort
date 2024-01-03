@@ -44,6 +44,12 @@ private void SortHalfArray(ArrayList<Integer> FirstHalf)
 	unsortedFirstHalf.remove(index);
 		index =  unsortedFirstHalf.indexOf(smallestNum);
 	unsortedFirstHalf.remove(index);
+	while(unsortedFirstHalf.isEmpty() == false)
+	{
+		
+	}
+	sortedFirstHalf.add(largestNum);
+	System.out.print(sortedFirstHalf);
 	/*We know the biggest and largest numbers,
 	 * so now find the order
 	 * 3. create variable named medianNum, we will 
@@ -86,7 +92,6 @@ private void AddFirstHalf(ArrayList<Integer> FirstHalf, int[][] Subdivisions)
 		int firstHalfLength = length / 2 - 1;
 		AddFirstHalf(FirstHalf, Subdivisions);
 		SortHalfArray(FirstHalf);
-		System.out.println(FirstHalf);
 		/*Array:
 		 * [[3, 5], [1, 2], [4, 6], [7, 8]]
 		 * We need it to be:
