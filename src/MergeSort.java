@@ -45,8 +45,6 @@ private ArrayList<Integer> SortHalfArray(ArrayList<Integer> HalfArray)
 		}
 		
 	}
-	System.out.println(largestNum);
-	System.out.println(smallestNum);
 	//Add the smallest to our sorted list
 	sortedFirstHalf.add(smallestNum);
 	//remove smallest and biggest from the unsortedList
