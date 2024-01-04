@@ -23,20 +23,27 @@ private ArrayList<Integer> SortHalfArray(ArrayList<Integer> HalfArray)
 		int nextNum = unsortedFirstHalf.get(x + 1);
 		//Compare the current and next number,
 		// find the smallest/greatest and store it
-		if(currentNum < nextNum)
+		/* if the current number is smaller , store it*/
+		if(currentNum < nextNum && currentNum < smallestNum)
 		{
-			if(currentNum < smallestNum)
-			{
 				smallestNum = currentNum;
-			}
 		}
-		if(currentNum > nextNum)
+		/*If the current number is bigger, store it*/
+		if(currentNum > nextNum && currentNum > largestNum)
 		{
-			if(currentNum > largestNum)
-			{
 				largestNum = currentNum;
-			}
 		}
+		/* if the next number is smaller , store it*/
+		if(nextNum < currentNum && nextNum < smallestNum)
+		{
+				smallestNum = nextNum;
+		}
+		/*If the next number is bigger, store it*/
+		if(nextNum > currentNum && nextNum > largestNum)
+		{
+				largestNum = nextNum;
+		}
+		
 	}
 	System.out.println(largestNum);
 	System.out.println(smallestNum);
@@ -97,7 +104,7 @@ private void AddSecondHalf(ArrayList<Integer> SecondHalf, int[][] Subdivisions)
 		SecondHalf.add(Subdivisions[x][1]);
 	}
 }
-	public int[][] JoinArrays(int[][] Subdivisions) {
+public int[][] JoinArrays(int[][] Subdivisions) {
 		ArrayList<Integer> FirstHalf = new ArrayList<Integer>();
 		ArrayList<Integer> SecondHalf = new ArrayList<Integer>();
 		// Get the length
@@ -107,7 +114,7 @@ private void AddSecondHalf(ArrayList<Integer> SecondHalf, int[][] Subdivisions)
 		AddSecondHalf(SecondHalf, Subdivisions);
 		FirstHalf = SortHalfArray(FirstHalf);
 		SecondHalf = SortHalfArray(SecondHalf);
-		System.out.print(SecondHalf);
+		System.out.println("[" + FirstHalf + "," + SecondHalf + "]");
 		/*Array:
 		 * [[3, 5], [1, 2], [4, 6], [7, 8]]
 		 * We need it to be:
